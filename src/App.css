@@ -32,7 +32,66 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+.layered-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Base layer style */
+.layer {
+  position: absolute;
+  width: 200%;
+  height: 200px;
+  transform: rotate(-45deg);
+  left: -50%;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Individual layers with depth and variation */
+.layer-1 {
+  top: 5%;
+  background-color: #074466;
+  z-index: 2;
+}
+
+.layer-2 {
+  top: 20%;
+  background-color: #ffffff;
+  z-index: 3;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.layer-3 {
+  top: 35%;
+  background-color: #074466;
+  z-index: 4;
+}
+
+.layer-4 {
+  top: 50%;
+  background-color: #ffffff;
+  z-index: 5;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.layer-5 {
+  top: 65%;
+  background-color: #074466;
+  z-index: 6;
 }
